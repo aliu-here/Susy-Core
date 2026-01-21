@@ -35,6 +35,7 @@ import gregtech.loaders.recipe.handlers.RecyclingRecipeHandler;
 import supersymmetry.api.recipes.SuSyRecipeMaps;
 import supersymmetry.api.unification.material.info.SuSyMaterialFlags;
 import supersymmetry.api.unification.material.properties.FiberProperty;
+import supersymmetry.api.unification.material.properties.MillBallProperty;
 import supersymmetry.api.unification.material.properties.SuSyPropertyKey;
 import supersymmetry.api.unification.ore.SusyOrePrefix;
 import supersymmetry.common.item.SuSyMetaItems;
@@ -363,7 +364,7 @@ public class SuSyMaterialRecipeHandler {
          * }
          */
     }
-    
+
     public static void processMillBalls(OrePrefix millBallPrefix, Material mat, MillBallProperty property) {
         if (mat.hasProperty(SuSyPropertyKey.MILL_BALL)) {
             FLUID_SOLIDFICATION_RECIPES.recipeBuilder()
