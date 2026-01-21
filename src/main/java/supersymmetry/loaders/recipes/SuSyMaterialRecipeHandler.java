@@ -363,4 +363,16 @@ public class SuSyMaterialRecipeHandler {
          * }
          */
     }
+    
+    public static void processMillBalls(OrePrefix millBallPrefix, Material mat, MillBallProperty property) {
+        if (mat.hasProperty(SuSyPropertyKey.MILL_BALL)) {
+            FLUID_SOLIDFICATION_RECIPES.recipeBuilder()
+                    .fluidInputs(mat.getFluid(144))
+                    .notConsumable(MetaItems.SHAPE_MOLD_BALL)
+                    .output(millBallPrefix, mat, 1)
+                    .EUt(VA[MV])
+                    .duration(20)
+                    .buildAndRegister();
+        }
+    }
 }
